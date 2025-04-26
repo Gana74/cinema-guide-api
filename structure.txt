@@ -1,0 +1,43 @@
+�   .gitignore
+�   index.html
+�   package-lock.json
+�   package.json
+�   README.md
+�   structure.txt
+�   tsconfig.app.json
+�   tsconfig.json
+�   tsconfig.node.json
+�   vite.config.ts
+---.vscode
+�       extensions.json       
+---node_modules  
+---public
+�       vite.svg       
+---src
+    �   App.vue
+    �   main.ts
+    �   style.css
+    �   vite-env.d.ts
+    �   axiosInterceptors.ts   
+    ---assets
+    �       vue.svg    
+    ---components
+    �       AuthForm.vue
+    �       GenreList.vue
+    �       Modal.vue
+    �       MovieCard.vue
+    �       MovieList.vue
+    �       SearchForm.vue    
+    ---router
+    �       index.ts
+    ---stores
+    �       auth.ts
+    �       favorites.ts
+    ---views
+    �       AccountView.vue
+    �       GenreMoviesView.vue
+    �       GenresView.vue
+    �       HomeView.vue
+    �       MovieDetails.vue
+    �       MovieView.vue
+            
