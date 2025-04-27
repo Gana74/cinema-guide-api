@@ -341,7 +341,7 @@ export default defineComponent({
 
 .movie__info {
   width: 100%;
-  min-width: 600px;
+  width: 600px;
   /* margin-top: 75px; */
   text-align: left;
 }
@@ -364,15 +364,15 @@ export default defineComponent({
 }
 
 .movie__info-rating {
-  /* max-width: 550px; */
   margin-bottom: 16px;
-  margin-right: 40px;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .movie__info-title {
@@ -445,6 +445,7 @@ export default defineComponent({
   width: 157px;
   height: 56px;
   margin-right: 16px;
+  margin-bottom: 10px;
   border-radius: 28px;
   border: none;
   background: rgb(103, 165, 235);
@@ -466,6 +467,7 @@ export default defineComponent({
   width: 172px;
   height: 56px;
   margin-right: 16px;
+  margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 28px;
   background: rgb(57, 59, 60);
@@ -514,7 +516,7 @@ export default defineComponent({
 
 .movie__poster {
   max-width: 680px;
-  max-height: 552px;
+  /* max-height: 552px; */
   width: 100%;
   height: 100%;
   border-radius: 16px;
@@ -619,14 +621,29 @@ export default defineComponent({
   }
 }
 @media (max-width: 1024px) {
+  .movie {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .movie__info {
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 5;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+
   .movie__poster {
-    min-width: 400px;
+    /* min-width: 400px; */
   }
 }
 
 @media (max-width: 900px) {
   .movie__info {
-    margin-top: 0;
+    /* margin-top: 0; */
   }
 
   .movie__info-rating {
@@ -653,32 +670,17 @@ export default defineComponent({
     width: 128px;
   }
 }
-
+/* 
 @media (max-width: 799px) {
-  .movie {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .movie__info {
-    -webkit-box-ordinal-group: 6;
-    -ms-flex-order: 5;
-    order: 5;
-    margin-right: 0;
-    margin-top: 30px;
-  }
-
   .movie__poster {
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
     max-height: 429px;
   }
-}
+} */
 
-@media (max-width: 500px) {
+@media (max-width: 799px) {
   .movie {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -690,7 +692,7 @@ export default defineComponent({
   }
 
   .movie__info {
-    /* width: 464px; */
+    width: 100%;
     margin-top: 24px;
     -webkit-box-ordinal-group: 6;
     -ms-flex-order: 5;
@@ -698,8 +700,12 @@ export default defineComponent({
   }
 
   .movie__poster {
-    max-width: 464px;
-    max-height: 230px;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    /* max-height: 429px; */
+    /* max-width: 464px; */
+    /* max-height: 230px; */
   }
 
   .movie__info-rating {
